@@ -1,0 +1,20 @@
+<div *ngIf="gameInfo">
+<h1>{{gameInfo.gameId}}</h1>
+<h2>{{gameInfo.userId}}</h2>
+<div>
+	<h3>{{gameInfo.role}}</h3>
+	<textarea rows="10" cols="50"></textarea>
+	<br/>
+	<input type="text"/>
+	<button>Send</button>
+</div>
+<div>
+Current Actions
+<day-action *ngIf="game.state == 'DAY'"></day-action>
+<town-action *ngIf="game.state == 'NIGHT' && gameInfo.role == 'TOWN'"></town-action>
+<mafia-action *ngIf="game.state == 'NIGHT' && gameInfo.role == 'MAFIA'"></mafia-action>
+<cop-action *ngIf="game.state == 'NIGHT' && gameInfo.role == 'COP'"></cop-action>
+<medic-action *ngIf="game.state == 'NIGHT' && gameInfo.role == 'MEDIC'"></medic-action>
+
+</div>
+</div>

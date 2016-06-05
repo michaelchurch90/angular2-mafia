@@ -1,0 +1,6 @@
+<h2>{{title}}</h2>
+<ul class="games">
+	<li (click)="viewDetails(game)" *ngFor="let game of games">
+		<span>{{game.id}}</span> {{game.title}}
+	</li>
+</ul>
