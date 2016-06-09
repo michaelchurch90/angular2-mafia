@@ -8,7 +8,6 @@ export class GameInfoService {
 			console.log(gameInfo);
 			return gameInfo.gameId == gameId && gameInfo.userId == userId;
 		});
-		console.log(filteredInfos);
 		return Promise.resolve(filteredInfos[0]);
 	}
 }
